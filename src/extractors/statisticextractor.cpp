@@ -20,8 +20,12 @@ PixelStatisticsStorageTile::PixelStatisticsStorageTile(const Bounds2i &tileBound
 void PixelStatisticsStorageTile::Accumulate(const Point2i &pixel, const Spectrum &L) {
 
     if (InsideExclusive(pixel, limits)) {
-        PixelStatistics &buf = GetPixel(pixel);
-        /* TODO : Compute the increments on buf.nbsamples, buf.luminance_mean, buf.luminance_variance */
+        PixelStatistics &buf = GetPixel( pixel );
+        float luminance = L.y();
+        ++buf.nbsamples;
+        float delta = luminance - buf.luminance_mean;
+        buf.luminance_mean += delta / buf.nbsamples;
+        buf.luminance_variance += delta * ( luminance - buf.luminance_mean );
     }
 
 }
