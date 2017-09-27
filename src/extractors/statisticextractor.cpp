@@ -51,7 +51,10 @@ void PixelStatisticsStorage::MergeTile(PixelStatisticsStorageTile &tile) {
     for (Point2i p : tile.GetBounds()) {
         PixelStatistics &buf_source = tile.GetPixel(p);
         PixelStatistics &buf = GetPixel(p);
-        /* TODO : set buf to finalized statistics from buf_source */
+        buf.nbsamples = buf_source.nbsamples;
+        buf.luminance_mean = buf_source.luminance_mean;
+        buf.luminance_variance = buf_source.luminance_variance / ( buf.nbsamples - 1 );
+        buf.luminance_error = std::sqrt( buf.luminance_variance / buf.nbsamples );
     }
 }
 
