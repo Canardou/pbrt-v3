@@ -1,0 +1,1634 @@
+The system is: Linux - 4.12.9-200.fc25.x86_64 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/lib64/ccache/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/hcl0216a/pbrt-v3/CMakeFiles/3.8.2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/lib64/ccache/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/hcl0216a/pbrt-v3/CMakeFiles/3.8.2/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_bc74b/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_bc74b.dir/build.make CMakeFiles/cmTC_bc74b.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_bc74b.dir/testCCompiler.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_bc74b.dir/testCCompiler.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_bc74b
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc74b.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_bc74b.dir/testCCompiler.c.o  -o cmTC_bc74b 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_f0852/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_f0852.dir/build.make CMakeFiles/cmTC_f0852.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_f0852.dir/CMakeCCompilerABI.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_f0852.dir/CMakeCCompilerABI.c.o   -c /home/hcl0216a/clion-2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_f0852
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0852.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc     -v -rdynamic CMakeFiles/cmTC_f0852.dir/CMakeCCompilerABI.c.o  -o cmTC_f0852 
+Utilisation des specs internes.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/lto-wrapper
+Cible : x86_64-redhat-linux
+Configuré avec: ../configure --enable-bootstrap --enable-languages=c,c++,objc,obj-c++,fortran,ada,go,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --disable-libgcj --with-isl --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Modèle de thread: posix
+gcc version 6.4.1 20170727 (Red Hat 6.4.1-1) (GCC) 
+COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/:/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/6.4.1/:/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/6.4.1/:/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f0852' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/6.4.1/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/6.4.1/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc97H4Cp.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f0852 /usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/6.4.1/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/6.4.1 -L/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../.. CMakeFiles/cmTC_f0852.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/6.4.1/crtend.o /usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f0852' '-mtune=generic' '-march=x86-64'
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_f0852/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_f0852.dir/build.make CMakeFiles/cmTC_f0852.dir/build]
+  ignore line: [gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »]
+  ignore line: [Building C object CMakeFiles/cmTC_f0852.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_f0852.dir/CMakeCCompilerABI.c.o   -c /home/hcl0216a/clion-2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_f0852]
+  ignore line: [/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0852.dir/link.txt --verbose=1]
+  ignore line: [/usr/lib64/ccache/cc     -v -rdynamic CMakeFiles/cmTC_f0852.dir/CMakeCCompilerABI.c.o  -o cmTC_f0852 ]
+  ignore line: [Utilisation des specs internes.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/lto-wrapper]
+  ignore line: [Cible : x86_64-redhat-linux]
+  ignore line: [Configuré avec: ../configure --enable-bootstrap --enable-languages=c,c++,objc,obj-c++,fortran,ada,go,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --disable-libgcj --with-isl --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+  ignore line: [Modèle de thread: posix]
+  ignore line: [gcc version 6.4.1 20170727 (Red Hat 6.4.1-1) (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/:/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/6.4.1/:/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/6.4.1/:/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f0852' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/6.4.1/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/6.4.1/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc97H4Cp.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_f0852 /usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/6.4.1/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/6.4.1 -L/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../.. CMakeFiles/cmTC_f0852.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/6.4.1/crtend.o /usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/crtn.o]
+    arg [/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc97H4Cp.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--no-add-needed] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_f0852] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/6.4.1/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/6.4.1] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/6.4.1]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../..]
+    arg [CMakeFiles/cmTC_f0852.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/6.4.1/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/6.4.1] ==> [/usr/lib/gcc/x86_64-redhat-linux/6.4.1]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64] ==> [/usr/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../..] ==> [/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/6.4.1;/usr/lib64;/lib64;/usr/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_5feb2/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_5feb2.dir/build.make CMakeFiles/cmTC_5feb2.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_5feb2.dir/feature_tests.c.o
+/usr/lib64/ccache/cc   -std=c11 -o CMakeFiles/cmTC_5feb2.dir/feature_tests.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/feature_tests.c
+Linking C executable cmTC_5feb2
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5feb2.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_5feb2.dir/feature_tests.c.o  -o cmTC_5feb2 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_19cc4/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_19cc4.dir/build.make CMakeFiles/cmTC_19cc4.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_19cc4.dir/feature_tests.c.o
+/usr/lib64/ccache/cc   -std=c99 -o CMakeFiles/cmTC_19cc4.dir/feature_tests.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/feature_tests.c
+Linking C executable cmTC_19cc4
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_19cc4.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_19cc4.dir/feature_tests.c.o  -o cmTC_19cc4 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_5fa36/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_5fa36.dir/build.make CMakeFiles/cmTC_5fa36.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_5fa36.dir/feature_tests.c.o
+/usr/lib64/ccache/cc   -std=c90 -o CMakeFiles/cmTC_5fa36.dir/feature_tests.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/feature_tests.c
+Linking C executable cmTC_5fa36
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5fa36.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_5fa36.dir/feature_tests.c.o  -o cmTC_5fa36 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_72d98/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_72d98.dir/build.make CMakeFiles/cmTC_72d98.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_72d98.dir/testCXXCompiler.cxx.o
+/usr/lib64/ccache/c++     -o CMakeFiles/cmTC_72d98.dir/testCXXCompiler.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_72d98
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72d98.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++       -rdynamic CMakeFiles/cmTC_72d98.dir/testCXXCompiler.cxx.o  -o cmTC_72d98 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_9dd36/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_9dd36.dir/build.make CMakeFiles/cmTC_9dd36.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_9dd36.dir/CMakeCXXCompilerABI.cpp.o
+/usr/lib64/ccache/c++     -o CMakeFiles/cmTC_9dd36.dir/CMakeCXXCompilerABI.cpp.o -c /home/hcl0216a/clion-2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_9dd36
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9dd36.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++      -v -rdynamic CMakeFiles/cmTC_9dd36.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_9dd36 
+Utilisation des specs internes.
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/lto-wrapper
+Cible : x86_64-redhat-linux
+Configuré avec: ../configure --enable-bootstrap --enable-languages=c,c++,objc,obj-c++,fortran,ada,go,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --disable-libgcj --with-isl --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Modèle de thread: posix
+gcc version 6.4.1 20170727 (Red Hat 6.4.1-1) (GCC) 
+COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/:/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/6.4.1/:/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/6.4.1/:/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_9dd36' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/6.4.1/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/6.4.1/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjbrIaF.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_9dd36 /usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/6.4.1/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/6.4.1 -L/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../.. CMakeFiles/cmTC_9dd36.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/6.4.1/crtend.o /usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_9dd36' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_9dd36/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_9dd36.dir/build.make CMakeFiles/cmTC_9dd36.dir/build]
+  ignore line: [gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »]
+  ignore line: [Building CXX object CMakeFiles/cmTC_9dd36.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/lib64/ccache/c++     -o CMakeFiles/cmTC_9dd36.dir/CMakeCXXCompilerABI.cpp.o -c /home/hcl0216a/clion-2017.2.2/bin/cmake/share/cmake-3.8/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_9dd36]
+  ignore line: [/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9dd36.dir/link.txt --verbose=1]
+  ignore line: [/usr/lib64/ccache/c++      -v -rdynamic CMakeFiles/cmTC_9dd36.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_9dd36 ]
+  ignore line: [Utilisation des specs internes.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/lto-wrapper]
+  ignore line: [Cible : x86_64-redhat-linux]
+  ignore line: [Configuré avec: ../configure --enable-bootstrap --enable-languages=c,c++,objc,obj-c++,fortran,ada,go,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --disable-libgcj --with-isl --enable-libmpx --enable-gnu-indirect-function --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+  ignore line: [Modèle de thread: posix]
+  ignore line: [gcc version 6.4.1 20170727 (Red Hat 6.4.1-1) (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/:/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/6.4.1/:/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/6.4.1/:/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_9dd36' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/6.4.1/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/6.4.1/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjbrIaF.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_9dd36 /usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/6.4.1/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/6.4.1 -L/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../.. CMakeFiles/cmTC_9dd36.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/6.4.1/crtend.o /usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/crtn.o]
+    arg [/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/6.4.1/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccjbrIaF.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--no-add-needed] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_9dd36] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/6.4.1/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/6.4.1] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/6.4.1]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../..]
+    arg [CMakeFiles/cmTC_9dd36.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/x86_64-redhat-linux/6.4.1/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64/crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/6.4.1] ==> [/usr/lib/gcc/x86_64-redhat-linux/6.4.1]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../../../lib64] ==> [/usr/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/6.4.1/../../..] ==> [/usr/lib]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/6.4.1;/usr/lib64;/lib64;/usr/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++1z] compiler features compiled with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_44d10/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_44d10.dir/build.make CMakeFiles/cmTC_44d10.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_44d10.dir/feature_tests.cxx.o
+/usr/lib64/ccache/c++    -std=c++1z -o CMakeFiles/cmTC_44d10.dir/feature_tests.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_44d10
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_44d10.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++       -rdynamic CMakeFiles/cmTC_44d10.dir/feature_tests.cxx.o  -o cmTC_44d10 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_42ac2/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_42ac2.dir/build.make CMakeFiles/cmTC_42ac2.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_42ac2.dir/feature_tests.cxx.o
+/usr/lib64/ccache/c++    -std=c++14 -o CMakeFiles/cmTC_42ac2.dir/feature_tests.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_42ac2
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42ac2.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++       -rdynamic CMakeFiles/cmTC_42ac2.dir/feature_tests.cxx.o  -o cmTC_42ac2 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_d4317/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_d4317.dir/build.make CMakeFiles/cmTC_d4317.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_d4317.dir/feature_tests.cxx.o
+/usr/lib64/ccache/c++    -std=c++11 -o CMakeFiles/cmTC_d4317.dir/feature_tests.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_d4317
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4317.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++       -rdynamic CMakeFiles/cmTC_d4317.dir/feature_tests.cxx.o  -o cmTC_d4317 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_d7f64/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_d7f64.dir/build.make CMakeFiles/cmTC_d7f64.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_d7f64.dir/feature_tests.cxx.o
+/usr/lib64/ccache/c++    -std=c++98 -o CMakeFiles/cmTC_d7f64.dir/feature_tests.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_d7f64
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d7f64.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++       -rdynamic CMakeFiles/cmTC_d7f64.dir/feature_tests.cxx.o  -o cmTC_d7f64 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_f1dc6/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_f1dc6.dir/build.make CMakeFiles/cmTC_f1dc6.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_f1dc6.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_f1dc6.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_f1dc6
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1dc6.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_f1dc6.dir/CheckIncludeFile.c.o  -o cmTC_f1dc6 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_e780c/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_e780c.dir/build.make CMakeFiles/cmTC_e780c.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_e780c.dir/CheckFunctionExists.c.o
+/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e780c.dir/CheckFunctionExists.c.o   -c /home/hcl0216a/clion-2017.2.2/bin/cmake/share/cmake-3.8/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e780c
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e780c.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_e780c.dir/CheckFunctionExists.c.o  -o cmTC_e780c -lpthread 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if files alloca.h exist passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_ddb8a/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_ddb8a.dir/build.make CMakeFiles/cmTC_ddb8a.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_ddb8a.dir/CheckIncludeFiles.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_ddb8a.dir/CheckIncludeFiles.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_ddb8a
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ddb8a.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_ddb8a.dir/CheckIncludeFiles.c.o  -o cmTC_ddb8a 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if files memory.h exist passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_4b940/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_4b940.dir/build.make CMakeFiles/cmTC_4b940.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_4b940.dir/CheckIncludeFiles.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_4b940.dir/CheckIncludeFiles.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_4b940
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4b940.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_4b940.dir/CheckIncludeFiles.c.o  -o cmTC_4b940 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if files unistd.h exist passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_3fb17/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_3fb17.dir/build.make CMakeFiles/cmTC_3fb17.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_3fb17.dir/CheckIncludeFiles.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_3fb17.dir/CheckIncludeFiles.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_3fb17
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3fb17.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_3fb17.dir/CheckIncludeFiles.c.o  -o cmTC_3fb17 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Performing C++ SOURCE FILE Test HAVE_HEX_FP_CONSTANTS succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_c81af/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_c81af.dir/build.make CMakeFiles/cmTC_c81af.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_c81af.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE_HEX_FP_CONSTANTS   -o CMakeFiles/cmTC_c81af.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_c81af
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c81af.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -DHAVE_HEX_FP_CONSTANTS    -rdynamic CMakeFiles/cmTC_c81af.dir/src.cxx.o  -o cmTC_c81af 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+int main() { float x = 0x1p-32f; }
+Performing C++ SOURCE FILE Test HAVE_BINARY_CONSTANTS succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_5f392/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_5f392.dir/build.make CMakeFiles/cmTC_5f392.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_5f392.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE_BINARY_CONSTANTS   -o CMakeFiles/cmTC_5f392.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_5f392
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5f392.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -DHAVE_BINARY_CONSTANTS    -rdynamic CMakeFiles/cmTC_5f392.dir/src.cxx.o  -o cmTC_5f392 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+int main() { int x = 0b101011; }
+Performing C++ SOURCE FILE Test HAVE_CONSTEXPR succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_d31d7/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_d31d7.dir/build.make CMakeFiles/cmTC_d31d7.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_d31d7.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE_CONSTEXPR   -o CMakeFiles/cmTC_d31d7.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_d31d7
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d31d7.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -DHAVE_CONSTEXPR    -rdynamic CMakeFiles/cmTC_d31d7.dir/src.cxx.o  -o cmTC_d31d7 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+int main() { constexpr int x = 0; }
+Performing C++ SOURCE FILE Test HAVE_ALIGNAS succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_be665/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_be665.dir/build.make CMakeFiles/cmTC_be665.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_be665.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE_ALIGNAS   -o CMakeFiles/cmTC_be665.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_be665
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be665.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -DHAVE_ALIGNAS    -rdynamic CMakeFiles/cmTC_be665.dir/src.cxx.o  -o cmTC_be665 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+struct alignas(32) Foo { char x; }; int main() { }
+Performing C++ SOURCE FILE Test HAVE_ALIGNOF succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_62b4d/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_62b4d.dir/build.make CMakeFiles/cmTC_62b4d.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_62b4d.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE_ALIGNOF   -o CMakeFiles/cmTC_62b4d.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_62b4d
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_62b4d.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -DHAVE_ALIGNOF    -rdynamic CMakeFiles/cmTC_62b4d.dir/src.cxx.o  -o cmTC_62b4d 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+int main() { int x = alignof(double); }
+Performing C++ SOURCE FILE Test HAVE_ITIMER succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_40944/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_40944.dir/build.make CMakeFiles/cmTC_40944.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_40944.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE_ITIMER   -o CMakeFiles/cmTC_40944.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_40944
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40944.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -DHAVE_ITIMER    -rdynamic CMakeFiles/cmTC_40944.dir/src.cxx.o  -o cmTC_40944 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+
+#include <signal.h>
+#include <string.h>
+#include <sys/time.h>
+void ReportProfileSample(int, siginfo_t *, void *) { }
+int main() {
+    struct sigaction sa;
+    memset(&sa, 0, sizeof(sa));
+    sa.sa_sigaction = ReportProfileSample;
+    sa.sa_flags = SA_RESTART | SA_SIGINFO;
+    sigemptyset(&sa.sa_mask);
+    sigaction(SIGPROF, &sa, NULL);
+    static struct itimerval timer;
+    setitimer(ITIMER_PROF, &timer, NULL);
+}
+
+Performing C++ SOURCE FILE Test HAVE_NONPOD_IN_UNIONS succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_d0fdc/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_d0fdc.dir/build.make CMakeFiles/cmTC_d0fdc.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_d0fdc.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE_NONPOD_IN_UNIONS   -o CMakeFiles/cmTC_d0fdc.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_d0fdc
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d0fdc.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -DHAVE_NONPOD_IN_UNIONS    -rdynamic CMakeFiles/cmTC_d0fdc.dir/src.cxx.o  -o cmTC_d0fdc 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+
+class Bar { public: Bar() { x = 0; } float x; };
+struct Foo { union { int x[10]; Bar b; }; Foo() : b() { } };
+int main() { Foo f; }
+
+Performing C++ SOURCE FILE Test HAVE_ATTRIBUTE_NOINLINE succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_ac047/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_ac047.dir/build.make CMakeFiles/cmTC_ac047.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_ac047.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE_ATTRIBUTE_NOINLINE   -o CMakeFiles/cmTC_ac047.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_ac047
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac047.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -DHAVE_ATTRIBUTE_NOINLINE    -rdynamic CMakeFiles/cmTC_ac047.dir/src.cxx.o  -o cmTC_ac047 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+__attribute__((noinline)) void foo() { }
+int main() { }
+Performing C++ SOURCE FILE Test HAVE_POSIX_MEMALIGN succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_de8e1/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_de8e1.dir/build.make CMakeFiles/cmTC_de8e1.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_de8e1.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE_POSIX_MEMALIGN   -o CMakeFiles/cmTC_de8e1.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_de8e1
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_de8e1.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -DHAVE_POSIX_MEMALIGN    -rdynamic CMakeFiles/cmTC_de8e1.dir/src.cxx.o  -o cmTC_de8e1 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+
+#include <stdlib.h>
+int main() {
+  void *ptr;
+  posix_memalign(&ptr, 32, 1024);
+} 
+Performing C++ SOURCE FILE Test HAVE_MEMALIGN succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_eb515/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_eb515.dir/build.make CMakeFiles/cmTC_eb515.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_eb515.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE_MEMALIGN   -o CMakeFiles/cmTC_eb515.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_eb515
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb515.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -DHAVE_MEMALIGN    -rdynamic CMakeFiles/cmTC_eb515.dir/src.cxx.o  -o cmTC_eb515 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+
+#include <malloc.h>
+int main() {
+    void *ptr = memalign(32, 1024);
+} 
+Performing C++ SOURCE FILE Test HAVE_THREAD_LOCAL succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_f4979/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_f4979.dir/build.make CMakeFiles/cmTC_f4979.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_f4979.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE_THREAD_LOCAL   -o CMakeFiles/cmTC_f4979.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_f4979
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f4979.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -DHAVE_THREAD_LOCAL    -rdynamic CMakeFiles/cmTC_f4979.dir/src.cxx.o  -o cmTC_f4979 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+
+thread_local int x; int main() { }
+
+Performing C++ SOURCE FILE Test HAVE___THREAD succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_92ec3/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_92ec3.dir/build.make CMakeFiles/cmTC_92ec3.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_92ec3.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE___THREAD   -o CMakeFiles/cmTC_92ec3.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_92ec3
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_92ec3.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -DHAVE___THREAD    -rdynamic CMakeFiles/cmTC_92ec3.dir/src.cxx.o  -o cmTC_92ec3 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+
+__thread int x; int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_GCC_INLINE_ASM_AVX succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_17b4a/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_17b4a.dir/build.make CMakeFiles/cmTC_17b4a.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_17b4a.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -Wno-unused-result -DHAVE_GCC_INLINE_ASM_AVX   -o CMakeFiles/cmTC_17b4a.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_17b4a
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17b4a.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -Wno-unused-result -DHAVE_GCC_INLINE_ASM_AVX    -rdynamic CMakeFiles/cmTC_17b4a.dir/src.cxx.o  -o cmTC_17b4a 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+
+	int main()
+	{
+	 #if defined(__GNUC__) && defined(__SSE2__) 
+		 int n   = 0;
+		 int eax = 0;
+		 int edx = 0;
+		 __asm__(
+			 "xgetbv     ;"
+			 "vzeroupper  "
+			 : "=a"(eax), "=d"(edx) : "c"(n) : );
+	 #else
+		 #error No GCC style inline asm supported for AVX instructions
+	 #endif
+	}
+	
+Performing C++ SOURCE FILE Test HAVE_SYSCONF_NPROCESSORS_ONLN succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_df153/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_df153.dir/build.make CMakeFiles/cmTC_df153.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_df153.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -Wno-unused-result -DHAVE_SYSCONF_NPROCESSORS_ONLN   -o CMakeFiles/cmTC_df153.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_df153
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df153.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -Wno-unused-result -DHAVE_SYSCONF_NPROCESSORS_ONLN    -rdynamic CMakeFiles/cmTC_df153.dir/src.cxx.o  -o cmTC_df153 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+
+    #include <unistd.h>
+    int main()
+    {
+        sysconf(_SC_NPROCESSORS_ONLN);
+    }
+    
+Determining if the include file dlfcn.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_9d1c1/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_9d1c1.dir/build.make CMakeFiles/cmTC_9d1c1.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_9d1c1.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_9d1c1.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_9d1c1
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d1c1.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_9d1c1.dir/CheckIncludeFile.c.o  -o cmTC_9d1c1 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file execinfo.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_d77d8/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_d77d8.dir/build.make CMakeFiles/cmTC_d77d8.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_d77d8.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_d77d8.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_d77d8
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d77d8.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_d77d8.dir/CheckIncludeFile.c.o  -o cmTC_d77d8 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file glob.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_00f57/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_00f57.dir/build.make CMakeFiles/cmTC_00f57.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_00f57.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_00f57.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_00f57
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00f57.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_00f57.dir/CheckIncludeFile.c.o  -o cmTC_00f57 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file inttypes.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_704be/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_704be.dir/build.make CMakeFiles/cmTC_704be.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_704be.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_704be.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_704be
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_704be.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_704be.dir/CheckIncludeFile.c.o  -o cmTC_704be 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file pwd.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_99e25/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_99e25.dir/build.make CMakeFiles/cmTC_99e25.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_99e25.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_99e25.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_99e25
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_99e25.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_99e25.dir/CheckIncludeFile.c.o  -o cmTC_99e25 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_af71f/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_af71f.dir/build.make CMakeFiles/cmTC_af71f.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_af71f.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_af71f.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_af71f
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_af71f.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_af71f.dir/CheckIncludeFile.c.o  -o cmTC_af71f 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file stdlib.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_7ec23/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_7ec23.dir/build.make CMakeFiles/cmTC_7ec23.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_7ec23.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_7ec23.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_7ec23
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7ec23.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_7ec23.dir/CheckIncludeFile.c.o  -o cmTC_7ec23 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file string.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_bea59/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_bea59.dir/build.make CMakeFiles/cmTC_bea59.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_bea59.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_bea59.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_bea59
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bea59.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_bea59.dir/CheckIncludeFile.c.o  -o cmTC_bea59 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file strings.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_46ae3/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_46ae3.dir/build.make CMakeFiles/cmTC_46ae3.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_46ae3.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_46ae3.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_46ae3
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_46ae3.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_46ae3.dir/CheckIncludeFile.c.o  -o cmTC_46ae3 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file sys/stat.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_3700f/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_3700f.dir/build.make CMakeFiles/cmTC_3700f.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_3700f.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_3700f.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_3700f
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3700f.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_3700f.dir/CheckIncludeFile.c.o  -o cmTC_3700f 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file sys/syscall.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_c09cb/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_c09cb.dir/build.make CMakeFiles/cmTC_c09cb.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_c09cb.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_c09cb.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_c09cb
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c09cb.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_c09cb.dir/CheckIncludeFile.c.o  -o cmTC_c09cb 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file sys/time.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_78214/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_78214.dir/build.make CMakeFiles/cmTC_78214.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_78214.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_78214.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_78214
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78214.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_78214.dir/CheckIncludeFile.c.o  -o cmTC_78214 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_e54a1/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_e54a1.dir/build.make CMakeFiles/cmTC_e54a1.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_e54a1.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_e54a1.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e54a1
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e54a1.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_e54a1.dir/CheckIncludeFile.c.o  -o cmTC_e54a1 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file sys/utsname.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_e893b/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_e893b.dir/build.make CMakeFiles/cmTC_e893b.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_e893b.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_e893b.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e893b
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e893b.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_e893b.dir/CheckIncludeFile.c.o  -o cmTC_e893b 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file syscall.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_dd807/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_dd807.dir/build.make CMakeFiles/cmTC_dd807.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_dd807.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_dd807.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_dd807
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dd807.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_dd807.dir/CheckIncludeFile.c.o  -o cmTC_dd807 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file syslog.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_5fab7/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_5fab7.dir/build.make CMakeFiles/cmTC_5fab7.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_5fab7.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_5fab7.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_5fab7
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5fab7.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_5fab7.dir/CheckIncludeFile.c.o  -o cmTC_5fab7 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file ucontext.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_cf17d/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_cf17d.dir/build.make CMakeFiles/cmTC_cf17d.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_cf17d.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_cf17d.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_cf17d
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf17d.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_cf17d.dir/CheckIncludeFile.c.o  -o cmTC_cf17d 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file unwind.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_8c559/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_8c559.dir/build.make CMakeFiles/cmTC_8c559.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_8c559.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_8c559.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_8c559
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c559.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_8c559.dir/CheckIncludeFile.c.o  -o cmTC_8c559 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file ext/hash_map exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_c67a1/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_c67a1.dir/build.make CMakeFiles/cmTC_c67a1.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_c67a1.dir/CheckIncludeFile.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null    -o CMakeFiles/cmTC_c67a1.dir/CheckIncludeFile.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+In file included from /usr/include/c++/6.4.1/ext/hash_map:60:0,
+                 from /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:
+/usr/include/c++/6.4.1/backward/backward_warning.h:32:2: attention : #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+ #warning \
+  ^~~~~~~
+Linking CXX executable cmTC_c67a1
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c67a1.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null     -rdynamic CMakeFiles/cmTC_c67a1.dir/CheckIncludeFile.cxx.o  -o cmTC_c67a1 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file ext/hash_set exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_41dc7/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_41dc7.dir/build.make CMakeFiles/cmTC_41dc7.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_41dc7.dir/CheckIncludeFile.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null    -o CMakeFiles/cmTC_41dc7.dir/CheckIncludeFile.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+In file included from /usr/include/c++/6.4.1/ext/hash_set:60:0,
+                 from /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:
+/usr/include/c++/6.4.1/backward/backward_warning.h:32:2: attention : #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+ #warning \
+  ^~~~~~~
+Linking CXX executable cmTC_41dc7
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_41dc7.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null     -rdynamic CMakeFiles/cmTC_41dc7.dir/CheckIncludeFile.cxx.o  -o cmTC_41dc7 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file ext/slist exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_4fc2a/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_4fc2a.dir/build.make CMakeFiles/cmTC_4fc2a.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_4fc2a.dir/CheckIncludeFile.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null    -o CMakeFiles/cmTC_4fc2a.dir/CheckIncludeFile.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_4fc2a
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4fc2a.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null     -rdynamic CMakeFiles/cmTC_4fc2a.dir/CheckIncludeFile.cxx.o  -o cmTC_4fc2a 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file tr1/unordered_map exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_ea425/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_ea425.dir/build.make CMakeFiles/cmTC_ea425.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_ea425.dir/CheckIncludeFile.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null    -o CMakeFiles/cmTC_ea425.dir/CheckIncludeFile.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_ea425
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ea425.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null     -rdynamic CMakeFiles/cmTC_ea425.dir/CheckIncludeFile.cxx.o  -o cmTC_ea425 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file tr1/unordered_set exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_f062a/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_f062a.dir/build.make CMakeFiles/cmTC_f062a.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_f062a.dir/CheckIncludeFile.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null    -o CMakeFiles/cmTC_f062a.dir/CheckIncludeFile.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_f062a
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f062a.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null     -rdynamic CMakeFiles/cmTC_f062a.dir/CheckIncludeFile.cxx.o  -o cmTC_f062a 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file unordered_map exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_a4669/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_a4669.dir/build.make CMakeFiles/cmTC_a4669.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_a4669.dir/CheckIncludeFile.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null    -o CMakeFiles/cmTC_a4669.dir/CheckIncludeFile.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_a4669
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4669.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null     -rdynamic CMakeFiles/cmTC_a4669.dir/CheckIncludeFile.cxx.o  -o cmTC_a4669 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file unordered_set exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_e234d/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_e234d.dir/build.make CMakeFiles/cmTC_e234d.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_e234d.dir/CheckIncludeFile.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null    -o CMakeFiles/cmTC_e234d.dir/CheckIncludeFile.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_e234d
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e234d.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null     -rdynamic CMakeFiles/cmTC_e234d.dir/CheckIncludeFile.cxx.o  -o cmTC_e234d 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_944a6/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_944a6.dir/build.make CMakeFiles/cmTC_944a6.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_944a6.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_944a6.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_944a6
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_944a6.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_944a6.dir/CheckIncludeFile.c.o  -o cmTC_944a6 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining size of u_int16_t passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_d004f/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_d004f.dir/build.make CMakeFiles/cmTC_d004f.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_d004f.dir/HAVE_U_INT16_T.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_d004f.dir/HAVE_U_INT16_T.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CheckTypeSize/HAVE_U_INT16_T.c
+Linking C executable cmTC_d004f
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d004f.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_d004f.dir/HAVE_U_INT16_T.c.o  -o cmTC_d004f 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining size of uint16_t passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_2fabb/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_2fabb.dir/build.make CMakeFiles/cmTC_2fabb.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_2fabb.dir/HAVE_UINT16_T.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_2fabb.dir/HAVE_UINT16_T.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CheckTypeSize/HAVE_UINT16_T.c
+Linking C executable cmTC_2fabb
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2fabb.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_2fabb.dir/HAVE_UINT16_T.c.o  -o cmTC_2fabb 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the function fcntl exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_95533/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_95533.dir/build.make CMakeFiles/cmTC_95533.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_95533.dir/CheckFunctionExists.c.o
+/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=fcntl   -o CMakeFiles/cmTC_95533.dir/CheckFunctionExists.c.o   -c /home/hcl0216a/clion-2017.2.2/bin/cmake/share/cmake-3.8/Modules/CheckFunctionExists.c
+Linking C executable cmTC_95533
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95533.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc  -DCHECK_FUNCTION_EXISTS=fcntl    -rdynamic CMakeFiles/cmTC_95533.dir/CheckFunctionExists.c.o  -o cmTC_95533 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the function pread exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_9ab5e/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_9ab5e.dir/build.make CMakeFiles/cmTC_9ab5e.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_9ab5e.dir/CheckFunctionExists.c.o
+/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=pread   -o CMakeFiles/cmTC_9ab5e.dir/CheckFunctionExists.c.o   -c /home/hcl0216a/clion-2017.2.2/bin/cmake/share/cmake-3.8/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9ab5e
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ab5e.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc  -DCHECK_FUNCTION_EXISTS=pread    -rdynamic CMakeFiles/cmTC_9ab5e.dir/CheckFunctionExists.c.o  -o cmTC_9ab5e 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the function pwrite exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_8f083/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_8f083.dir/build.make CMakeFiles/cmTC_8f083.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_8f083.dir/CheckFunctionExists.c.o
+/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=pwrite   -o CMakeFiles/cmTC_8f083.dir/CheckFunctionExists.c.o   -c /home/hcl0216a/clion-2017.2.2/bin/cmake/share/cmake-3.8/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8f083
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8f083.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc  -DCHECK_FUNCTION_EXISTS=pwrite    -rdynamic CMakeFiles/cmTC_8f083.dir/CheckFunctionExists.c.o  -o cmTC_8f083 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the function sigaction exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_523ab/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_523ab.dir/build.make CMakeFiles/cmTC_523ab.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_523ab.dir/CheckFunctionExists.c.o
+/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=sigaction   -o CMakeFiles/cmTC_523ab.dir/CheckFunctionExists.c.o   -c /home/hcl0216a/clion-2017.2.2/bin/cmake/share/cmake-3.8/Modules/CheckFunctionExists.c
+Linking C executable cmTC_523ab
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_523ab.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc  -DCHECK_FUNCTION_EXISTS=sigaction    -rdynamic CMakeFiles/cmTC_523ab.dir/CheckFunctionExists.c.o  -o cmTC_523ab 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Determining if the function sigaltstack exists passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_2f0c8/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_2f0c8.dir/build.make CMakeFiles/cmTC_2f0c8.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_2f0c8.dir/CheckFunctionExists.c.o
+/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=sigaltstack   -o CMakeFiles/cmTC_2f0c8.dir/CheckFunctionExists.c.o   -c /home/hcl0216a/clion-2017.2.2/bin/cmake/share/cmake-3.8/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2f0c8
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2f0c8.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc  -DCHECK_FUNCTION_EXISTS=sigaltstack    -rdynamic CMakeFiles/cmTC_2f0c8.dir/CheckFunctionExists.c.o  -o cmTC_2f0c8 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+
+Performing C++ SOURCE FILE Test HAVE_NO_DEPRECATED succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_e3106/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_e3106.dir/build.make CMakeFiles/cmTC_e3106.dir/build
+gmake[1]: Entering directory '/home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e3106.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE_NO_DEPRECATED   -Wno-deprecated -o CMakeFiles/cmTC_e3106.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e3106
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3106.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -DHAVE_NO_DEPRECATED    -rdynamic CMakeFiles/cmTC_e3106.dir/src.cxx.o  -o cmTC_e3106 
+gmake[1]: Leaving directory '/home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_NO_UNNAMED_TYPE_TEMPLATE_ARGS succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_9e3ad/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_9e3ad.dir/build.make CMakeFiles/cmTC_9e3ad.dir/build
+gmake[1]: Entering directory '/home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9e3ad.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE_NO_UNNAMED_TYPE_TEMPLATE_ARGS   -Wno-unnamed-type-template-args -o CMakeFiles/cmTC_9e3ad.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_9e3ad
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9e3ad.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -DHAVE_NO_UNNAMED_TYPE_TEMPLATE_ARGS    -rdynamic CMakeFiles/cmTC_9e3ad.dir/src.cxx.o  -o cmTC_9e3ad 
+gmake[1]: Leaving directory '/home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Determining if the snprintf exist passed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_69c88/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_69c88.dir/build.make CMakeFiles/cmTC_69c88.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_69c88.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_69c88.dir/CheckSymbolExists.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_69c88
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69c88.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_69c88.dir/CheckSymbolExists.c.o  -o cmTC_69c88 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+File /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef snprintf
+  return ((int*)(&snprintf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C SOURCE FILE Test HAVE___ATTRIBUTE__ succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_9efec/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_9efec.dir/build.make CMakeFiles/cmTC_9efec.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_9efec.dir/src.c.o
+/usr/lib64/ccache/cc   -DHAVE___ATTRIBUTE__   -o CMakeFiles/cmTC_9efec.dir/src.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_9efec
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9efec.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc  -DHAVE___ATTRIBUTE__    -rdynamic CMakeFiles/cmTC_9efec.dir/src.c.o  -o cmTC_9efec 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+
+#include <stdlib.h>
+static void foo(void) __attribute__ ((unused));
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test HAVE___ATTRIBUTE__VISIBILITY_DEFAULT succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_8d6ad/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_8d6ad.dir/build.make CMakeFiles/cmTC_8d6ad.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_8d6ad.dir/src.c.o
+/usr/lib64/ccache/cc   -DHAVE___ATTRIBUTE__VISIBILITY_DEFAULT   -o CMakeFiles/cmTC_8d6ad.dir/src.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.c
+/home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.c:3:1: attention : « visibility » attribute ignored [-Wattributes]
+ static void foo(void) __attribute__ ((visibility("default")));
+ ^~~~~~
+Linking C executable cmTC_8d6ad
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d6ad.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc  -DHAVE___ATTRIBUTE__VISIBILITY_DEFAULT    -rdynamic CMakeFiles/cmTC_8d6ad.dir/src.c.o  -o cmTC_8d6ad 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+
+#include <stdlib.h>
+static void foo(void) __attribute__ ((visibility("default")));
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test HAVE___ATTRIBUTE__VISIBILITY_HIDDEN succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_d153b/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_d153b.dir/build.make CMakeFiles/cmTC_d153b.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_d153b.dir/src.c.o
+/usr/lib64/ccache/cc   -DHAVE___ATTRIBUTE__VISIBILITY_HIDDEN   -o CMakeFiles/cmTC_d153b.dir/src.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.c
+/home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.c:3:1: attention : « visibility » attribute ignored [-Wattributes]
+ static void foo(void) __attribute__ ((visibility("hidden")));
+ ^~~~~~
+Linking C executable cmTC_d153b
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d153b.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc  -DHAVE___ATTRIBUTE__VISIBILITY_HIDDEN    -rdynamic CMakeFiles/cmTC_d153b.dir/src.c.o  -o cmTC_d153b 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+
+#include <stdlib.h>
+static void foo(void) __attribute__ ((visibility("hidden")));
+int main(void) { return 0; }
+
+Performing C SOURCE FILE Test HAVE___BUILTIN_EXPECT succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_ebd89/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_ebd89.dir/build.make CMakeFiles/cmTC_ebd89.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_ebd89.dir/src.c.o
+/usr/lib64/ccache/cc   -DHAVE___BUILTIN_EXPECT   -o CMakeFiles/cmTC_ebd89.dir/src.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_ebd89
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ebd89.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc  -DHAVE___BUILTIN_EXPECT    -rdynamic CMakeFiles/cmTC_ebd89.dir/src.c.o  -o cmTC_ebd89 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+
+int main(void) { if (__builtin_expect(0, 0)) return 1; return 0; }
+
+Performing C SOURCE FILE Test HAVE___SYNC_VAL_COMPARE_AND_SWAP succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_8a78c/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_8a78c.dir/build.make CMakeFiles/cmTC_8a78c.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_8a78c.dir/src.c.o
+/usr/lib64/ccache/cc   -DHAVE___SYNC_VAL_COMPARE_AND_SWAP   -o CMakeFiles/cmTC_8a78c.dir/src.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_8a78c
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a78c.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc  -DHAVE___SYNC_VAL_COMPARE_AND_SWAP    -rdynamic CMakeFiles/cmTC_8a78c.dir/src.c.o  -o cmTC_8a78c 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+
+int main(void)
+{
+  int a; if (__sync_val_compare_and_swap(&a, 0, 1)) return 1; return 0;
+}
+
+Performing C++ SOURCE FILE Test STL_STD_NAMESPACE succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_ae668/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_ae668.dir/build.make CMakeFiles/cmTC_ae668.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_ae668.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DSTL_STD_NAMESPACE   -o CMakeFiles/cmTC_ae668.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_ae668
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae668.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -DSTL_STD_NAMESPACE    -rdynamic CMakeFiles/cmTC_ae668.dir/src.cxx.o  -o cmTC_ae668 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+
+#include <vector>
+std::vector<int> t; int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_USING_OPERATOR succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_7b11a/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_7b11a.dir/build.make CMakeFiles/cmTC_7b11a.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_7b11a.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE_USING_OPERATOR   -o CMakeFiles/cmTC_7b11a.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_7b11a
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7b11a.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -DHAVE_USING_OPERATOR    -rdynamic CMakeFiles/cmTC_7b11a.dir/src.cxx.o  -o cmTC_7b11a 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+
+#include <iostream>
+std::ostream& operator<<(std::ostream&, struct s);
+using ::operator<<;
+int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_NAMESPACES succeeded with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_01247/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_01247.dir/build.make CMakeFiles/cmTC_01247.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_01247.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE_NAMESPACES   -o CMakeFiles/cmTC_01247.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_01247
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01247.dir/link.txt --verbose=1
+/usr/lib64/ccache/c++   -std=gnu++11 -Wno-conversion-null -DHAVE_NAMESPACES    -rdynamic CMakeFiles/cmTC_01247.dir/src.cxx.o  -o cmTC_01247 
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+
+Source file was:
+
+namespace Outer { namespace Inner { int i = 0; }}
+using namespace Outer::Inner;;
+int main() { return i; }
+

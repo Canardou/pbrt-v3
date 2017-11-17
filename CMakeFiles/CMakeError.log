@@ -1,0 +1,356 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_f3442/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_f3442.dir/build.make CMakeFiles/cmTC_f3442.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_f3442.dir/CheckSymbolExists.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_f3442.dir/CheckSymbolExists.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_f3442
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f3442.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc      -rdynamic CMakeFiles/cmTC_f3442.dir/CheckSymbolExists.c.o  -o cmTC_f3442 
+CMakeFiles/cmTC_f3442.dir/CheckSymbolExists.c.o : Dans la fonction « main » :
+CheckSymbolExists.c:(.text+0x16) : référence indéfinie vers « pthread_create »
+collect2: erreur : ld a retourné 1 code d'état d'exécution
+CMakeFiles/cmTC_f3442.dir/build.make:97 : la recette pour la cible « cmTC_f3442 » a échouée
+gmake[1]: *** [cmTC_f3442] Erreur 1
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_f3442/fast » a échouée
+gmake: *** [cmTC_f3442/fast] Erreur 2
+
+File /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_52153/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_52153.dir/build.make CMakeFiles/cmTC_52153.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_52153.dir/CheckFunctionExists.c.o
+/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_52153.dir/CheckFunctionExists.c.o   -c /home/hcl0216a/clion-2017.2.2/bin/cmake/share/cmake-3.8/Modules/CheckFunctionExists.c
+Linking C executable cmTC_52153
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_52153.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_52153.dir/CheckFunctionExists.c.o  -o cmTC_52153 -lpthreads 
+/usr/bin/ld : ne peut trouver -lpthreads
+collect2: erreur : ld a retourné 1 code d'état d'exécution
+CMakeFiles/cmTC_52153.dir/build.make:97 : la recette pour la cible « cmTC_52153 » a échouée
+gmake[1]: *** [cmTC_52153] Erreur 1
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_52153/fast » a échouée
+gmake: *** [cmTC_52153/fast] Erreur 2
+
+
+Performing C++ SOURCE FILE Test HAVE_DECLSPEC_NOINLINE failed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_ec9a6/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_ec9a6.dir/build.make CMakeFiles/cmTC_ec9a6.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_ec9a6.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE_DECLSPEC_NOINLINE   -o CMakeFiles/cmTC_ec9a6.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+/home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx:1:11: erreur : expected constructor, destructor, or type conversion before « ( » token
+ __declspec(noinline) void foo() { }
+           ^
+CMakeFiles/cmTC_ec9a6.dir/build.make:65 : la recette pour la cible « CMakeFiles/cmTC_ec9a6.dir/src.cxx.o » a échouée
+gmake[1]: *** [CMakeFiles/cmTC_ec9a6.dir/src.cxx.o] Erreur 1
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_ec9a6/fast » a échouée
+gmake: *** [cmTC_ec9a6/fast] Erreur 2
+
+Source file was:
+__declspec(noinline) void foo() { }
+int main() { }
+Performing C++ SOURCE FILE Test HAVE__ALIGNED_MALLOC failed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_9fd5c/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_9fd5c.dir/build.make CMakeFiles/cmTC_9fd5c.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_9fd5c.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE__ALIGNED_MALLOC   -o CMakeFiles/cmTC_9fd5c.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+/home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx: Dans la fonction « int main() »:
+/home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx:3:51: erreur : « _aligned_malloc » was not declared in this scope
+ int main() { void * ptr = _aligned_malloc(1024, 32); }
+                                                   ^
+CMakeFiles/cmTC_9fd5c.dir/build.make:65 : la recette pour la cible « CMakeFiles/cmTC_9fd5c.dir/src.cxx.o » a échouée
+gmake[1]: *** [CMakeFiles/cmTC_9fd5c.dir/src.cxx.o] Erreur 1
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_9fd5c/fast » a échouée
+gmake: *** [cmTC_9fd5c/fast] Erreur 2
+
+Source file was:
+
+#include <malloc.h>
+int main() { void * ptr = _aligned_malloc(1024, 32); }
+
+Performing C++ SOURCE FILE Test HAVE_DECLSPEC_THREAD failed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_ca886/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_ca886.dir/build.make CMakeFiles/cmTC_ca886.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_ca886.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DHAVE_DECLSPEC_THREAD   -o CMakeFiles/cmTC_ca886.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+/home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx:2:11: erreur : expected constructor, destructor, or type conversion before « ( » token
+ __declspec(thread) int x; int main() { }
+           ^
+CMakeFiles/cmTC_ca886.dir/build.make:65 : la recette pour la cible « CMakeFiles/cmTC_ca886.dir/src.cxx.o » a échouée
+gmake[1]: *** [CMakeFiles/cmTC_ca886.dir/src.cxx.o] Erreur 1
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_ca886/fast » a échouée
+gmake: *** [cmTC_ca886/fast] Erreur 2
+
+Source file was:
+
+__declspec(thread) int x; int main() { }
+
+Determining if the include file libunwind.h exists failed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_06a03/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_06a03.dir/build.make CMakeFiles/cmTC_06a03.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_06a03.dir/CheckIncludeFile.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_06a03.dir/CheckIncludeFile.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:23: erreur fatale : libunwind.h : Aucun fichier ou dossier de ce type
+ #include <libunwind.h>
+                       ^
+compilation terminée.
+CMakeFiles/cmTC_06a03.dir/build.make:65 : la recette pour la cible « CMakeFiles/cmTC_06a03.dir/CheckIncludeFile.c.o » a échouée
+gmake[1]: *** [CMakeFiles/cmTC_06a03.dir/CheckIncludeFile.c.o] Erreur 1
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_06a03/fast » a échouée
+gmake: *** [cmTC_06a03/fast] Erreur 2
+
+
+Determining size of unsigned __int16 failed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_b5e45/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_b5e45.dir/build.make CMakeFiles/cmTC_b5e45.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_b5e45.dir/HAVE___UINT16.c.o
+/usr/lib64/ccache/cc    -o CMakeFiles/cmTC_b5e45.dir/HAVE___UINT16.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CheckTypeSize/HAVE___UINT16.c
+/home/hcl0216a/pbrt-v3/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:17:31: erreur : expected « ) » before « __int16 »
+ #define SIZE (sizeof(unsigned __int16))
+                               ^
+/home/hcl0216a/pbrt-v3/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:19:12: note : in expansion of macro « SIZE »
+   ('0' + ((SIZE / 10000)%10)),
+            ^~~~
+/home/hcl0216a/pbrt-v3/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:17:31: erreur : expected « ) » before « __int16 »
+ #define SIZE (sizeof(unsigned __int16))
+                               ^
+/home/hcl0216a/pbrt-v3/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:20:12: note : in expansion of macro « SIZE »
+   ('0' + ((SIZE / 1000)%10)),
+            ^~~~
+/home/hcl0216a/pbrt-v3/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:17:31: erreur : expected « ) » before « __int16 »
+ #define SIZE (sizeof(unsigned __int16))
+                               ^
+/home/hcl0216a/pbrt-v3/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:21:12: note : in expansion of macro « SIZE »
+   ('0' + ((SIZE / 100)%10)),
+            ^~~~
+/home/hcl0216a/pbrt-v3/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:17:31: erreur : expected « ) » before « __int16 »
+ #define SIZE (sizeof(unsigned __int16))
+                               ^
+/home/hcl0216a/pbrt-v3/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:22:12: note : in expansion of macro « SIZE »
+   ('0' + ((SIZE / 10)%10)),
+            ^~~~
+/home/hcl0216a/pbrt-v3/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:17:31: erreur : expected « ) » before « __int16 »
+ #define SIZE (sizeof(unsigned __int16))
+                               ^
+/home/hcl0216a/pbrt-v3/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:23:12: note : in expansion of macro « SIZE »
+   ('0' +  (SIZE    % 10)),
+            ^~~~
+CMakeFiles/cmTC_b5e45.dir/build.make:65 : la recette pour la cible « CMakeFiles/cmTC_b5e45.dir/HAVE___UINT16.c.o » a échouée
+gmake[1]: *** [CMakeFiles/cmTC_b5e45.dir/HAVE___UINT16.c.o] Erreur 1
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_b5e45/fast » a échouée
+gmake: *** [cmTC_b5e45/fast] Erreur 2
+
+/home/hcl0216a/pbrt-v3/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(unsigned __int16))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function dladdr exists failed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_8e989/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_8e989.dir/build.make CMakeFiles/cmTC_8e989.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_8e989.dir/CheckFunctionExists.c.o
+/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=dladdr   -o CMakeFiles/cmTC_8e989.dir/CheckFunctionExists.c.o   -c /home/hcl0216a/clion-2017.2.2/bin/cmake/share/cmake-3.8/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8e989
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e989.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc  -DCHECK_FUNCTION_EXISTS=dladdr    -rdynamic CMakeFiles/cmTC_8e989.dir/CheckFunctionExists.c.o  -o cmTC_8e989 
+CMakeFiles/cmTC_8e989.dir/CheckFunctionExists.c.o : Dans la fonction « main » :
+CheckFunctionExists.c:(.text+0x10) : référence indéfinie vers « dladdr »
+collect2: erreur : ld a retourné 1 code d'état d'exécution
+CMakeFiles/cmTC_8e989.dir/build.make:97 : la recette pour la cible « cmTC_8e989 » a échouée
+gmake[1]: *** [cmTC_8e989] Erreur 1
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_8e989/fast » a échouée
+gmake: *** [cmTC_8e989/fast] Erreur 2
+
+
+Determining if the function get_static_proc_name exists in the unwind failed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_59869/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_59869.dir/build.make CMakeFiles/cmTC_59869.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_59869.dir/CheckFunctionExists.c.o
+/usr/lib64/ccache/cc   -DCHECK_FUNCTION_EXISTS=get_static_proc_name   -o CMakeFiles/cmTC_59869.dir/CheckFunctionExists.c.o   -c /home/hcl0216a/clion-2017.2.2/bin/cmake/share/cmake-3.8/Modules/CheckFunctionExists.c
+Linking C executable cmTC_59869
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59869.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc  -DCHECK_FUNCTION_EXISTS=get_static_proc_name    -rdynamic CMakeFiles/cmTC_59869.dir/CheckFunctionExists.c.o  -o cmTC_59869 -lunwind 
+/usr/bin/ld : ne peut trouver -lunwind
+collect2: erreur : ld a retourné 1 code d'état d'exécution
+CMakeFiles/cmTC_59869.dir/build.make:97 : la recette pour la cible « cmTC_59869 » a échouée
+gmake[1]: *** [cmTC_59869] Erreur 1
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_59869/fast » a échouée
+gmake: *** [cmTC_59869/fast] Erreur 2
+
+
+Performing C SOURCE FILE Test HAVE_RWLOCK failed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_a4cc1/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_a4cc1.dir/build.make CMakeFiles/cmTC_a4cc1.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_a4cc1.dir/src.c.o
+/usr/lib64/ccache/cc   -DHAVE_RWLOCK   -o CMakeFiles/cmTC_a4cc1.dir/src.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a4cc1
+/home/hcl0216a/clion-2017.2.2/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4cc1.dir/link.txt --verbose=1
+/usr/lib64/ccache/cc  -DHAVE_RWLOCK    -rdynamic CMakeFiles/cmTC_a4cc1.dir/src.c.o  -o cmTC_a4cc1 
+CMakeFiles/cmTC_a4cc1.dir/src.c.o : Dans la fonction « main » :
+src.c:(.text+0x15) : référence indéfinie vers « pthread_rwlock_init »
+src.c:(.text+0x21) : référence indéfinie vers « pthread_rwlock_rdlock »
+collect2: erreur : ld a retourné 1 code d'état d'exécution
+CMakeFiles/cmTC_a4cc1.dir/build.make:97 : la recette pour la cible « cmTC_a4cc1 » a échouée
+gmake[1]: *** [cmTC_a4cc1] Erreur 1
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_a4cc1/fast » a échouée
+gmake: *** [cmTC_a4cc1/fast] Erreur 2
+
+Source file was:
+
+#define _XOPEN_SOURCE 500
+#include <pthread.h>
+int main(void)
+{
+  pthread_rwlock_t l;
+  pthread_rwlock_init(&l, NULL);
+  pthread_rwlock_rdlock(&l);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE___DECLSPEC failed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_740e0/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_740e0.dir/build.make CMakeFiles/cmTC_740e0.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_740e0.dir/src.c.o
+/usr/lib64/ccache/cc   -DHAVE___DECLSPEC   -o CMakeFiles/cmTC_740e0.dir/src.c.o   -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.c
+/home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.c:2:1: attention : return type defaults to « int » [-Wimplicit-int]
+ __declspec(selectany) int a;
+ ^~~~~~~~~~
+/home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.c: Dans la fonction « __declspec »:
+/home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.c:3:16: erreur : expected « = », « , », « ; », « asm » or « __attribute__ » before « { » token
+ int main(void) { return 0; }
+                ^
+/home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.c:2:1: attention : type of « selectany » defaults to « int » [-Wimplicit-int]
+ __declspec(selectany) int a;
+ ^~~~~~~~~~
+/home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.c:2:27: erreur : declaration for parameter « a » but no such parameter
+ __declspec(selectany) int a;
+                           ^
+/home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.c:3:16: erreur : expected « { » at end of input
+ int main(void) { return 0; }
+                ^
+CMakeFiles/cmTC_740e0.dir/build.make:65 : la recette pour la cible « CMakeFiles/cmTC_740e0.dir/src.c.o » a échouée
+gmake[1]: *** [CMakeFiles/cmTC_740e0.dir/src.c.o] Erreur 1
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_740e0/fast » a échouée
+gmake: *** [cmTC_740e0/fast] Erreur 2
+
+Source file was:
+
+__declspec(selectany) int a;
+int main(void) { return 0; }
+
+Performing C++ SOURCE FILE Test STL_NO_NAMESPACE failed with the following output:
+Change Dir: /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_66082/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_66082.dir/build.make CMakeFiles/cmTC_66082.dir/build
+gmake[1] : on entre dans le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_66082.dir/src.cxx.o
+/usr/lib64/ccache/c++    -std=gnu++11 -Wno-conversion-null -DSTL_NO_NAMESPACE   -o CMakeFiles/cmTC_66082.dir/src.cxx.o -c /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx
+/home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp/src.cxx:3:1: erreur : « vector » does not name a type
+ vector<int> t; int main() { }
+ ^~~~~~
+CMakeFiles/cmTC_66082.dir/build.make:65 : la recette pour la cible « CMakeFiles/cmTC_66082.dir/src.cxx.o » a échouée
+gmake[1]: *** [CMakeFiles/cmTC_66082.dir/src.cxx.o] Erreur 1
+gmake[1] : on quitte le répertoire « /home/hcl0216a/pbrt-v3/CMakeFiles/CMakeTmp »
+Makefile:126 : la recette pour la cible « cmTC_66082/fast » a échouée
+gmake: *** [cmTC_66082/fast] Erreur 2
+
+Source file was:
+
+#include <vector>
+vector<int> t; int main() { }
+
