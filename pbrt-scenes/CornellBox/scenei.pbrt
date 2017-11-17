@@ -6,7 +6,7 @@ Sampler "sobol" "integer pixelsamples" [ replace_integer ]
 
 PixelFilter "triangle" "float xwidth" [ 1.000000 ] "float ywidth" [ 1.000000 ]
 
-Film "image" "integer xresolution" [ 512 ] "integer yresolution" [ 512 ] "string filename" [ "cornell-box-replace_integerspp.png" ] 
+Film "image" "integer xresolution" [ 256 ] "integer yresolution" [ 256 ] "string filename" [ "cornell-box-replace_integerspp.png" ] 
 
 Camera "perspective" "float fov" [ 19.500000 ]
 
