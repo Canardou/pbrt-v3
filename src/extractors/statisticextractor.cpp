@@ -53,7 +53,10 @@ void PixelStatisticsStorage::MergeTile(PixelStatisticsStorageTile &tile) {
         PixelStatistics &buf = GetPixel(p);
         buf.nbsamples = buf_source.nbsamples;
         buf.luminance_mean = buf_source.luminance_mean;
-        buf.luminance_variance = buf_source.luminance_variance / ( buf.nbsamples - 1 );
+        if (buf.nbsamples > 1)
+            buf.luminance_variance = buf_source.luminance_variance / ( buf.nbsamples - 1 );
+        else
+            buf.luminance_variance = buf_source.luminance_variance;
         buf.luminance_error = std::sqrt( buf.luminance_variance / buf.nbsamples );
     }
 }
