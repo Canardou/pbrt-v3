@@ -272,9 +272,7 @@ void SamplerIntegrator::Render(const Scene &scene) {
     mean /= estimate_samples;
     variance = std::sqrt(variance / estimate_samples - mean * mean);
     
-    std::cout << "Luminance mean : " << mean << std::endl;
-    std::cout << "Luminance variance : " << variance << std::endl;
-    std::cout << "Interval : [" << mean - 2 * variance / std::sqrt(estimate_samples) << "," <<  mean + 2 * variance / std::sqrt(estimate_samples)<< "]" << std::endl;
+    float luminance_interval_error_percentage = 2 * variance / std::sqrt(estimate_samples) / mean;
     //END TODO
     
     const int tileSize = 16;
@@ -323,64 +321,94 @@ void SamplerIntegrator::Render(const Scene &scene) {
 
                 extractorTile->BeginPixel(pixel);
 
+                //TODO if luminance of this pixel is not in the 95% threshold
+                
+                float current_mean = 0.0f;
+                float current_variance = 0.0f;
+                float iterations = 0.0f;
+                float temp = 0.0f;
+                    
                 do {
+                    
+                //END TODO
+                    iterations += 1.0f;
 
-                    // Initialize _CameraSample_ for current sample
-                    CameraSample cameraSample =
-                        tileSampler->GetCameraSample(pixel);
-
-                    // Generate camera ray for current sample
-                    RayDifferential ray;
-                    Float rayWeight =
-                        camera->GenerateRayDifferential(cameraSample, &ray);
-                    ray.ScaleDifferentials(
-                        1 / std::sqrt((Float)tileSampler->samplesPerPixel));
-                    ++nCameraRays;
-
-                    // begin sample
-                    extractorTile->BeginSample(cameraSample.pFilm);
-
-                    // Evaluate radiance along camera ray
-                    Spectrum L(0.f);
-
-                    extractorTile->BeginPath(cameraSample.pFilm);
-                    if (rayWeight > 0) L = Li(ray, scene, *tileSampler, arena, *extractorTile);
-
-                    // Issue warning if unexpected radiance value returned
-                    if (L.HasNaNs()) {
-                        LOG(ERROR) << StringPrintf(
-                            "Not-a-number radiance value returned "
-                            "for pixel (%d, %d), sample %d. Setting to black.",
-                            pixel.x, pixel.y,
-                            (int)tileSampler->CurrentSampleNumber());
-                        L = Spectrum(0.f);
-                    } else if (L.y() < -1e-5) {
-                        LOG(ERROR) << StringPrintf(
-                            "Negative luminance value, %f, returned "
-                            "for pixel (%d, %d), sample %d. Setting to black.",
-                            L.y(), pixel.x, pixel.y,
-                            (int)tileSampler->CurrentSampleNumber());
-                        L = Spectrum(0.f);
-                    } else if (std::isinf(L.y())) {
-                          LOG(ERROR) << StringPrintf(
-                            "Infinite luminance value returned "
-                            "for pixel (%d, %d), sample %d. Setting to black.",
-                            pixel.x, pixel.y,
-                            (int)tileSampler->CurrentSampleNumber());
-                        L = Spectrum(0.f);
-                    }
-                    VLOG(1) << "Camera sample: " << cameraSample << " -> ray: " <<
-                        ray << " -> L = " << L;
-                    extractorTile->EndPath(L, rayWeight);
-                    extractorTile->EndSample(L, rayWeight);
-                    // Add camera ray's contribution to image
-                    filmTile->AddSample(cameraSample.pFilm, L, rayWeight);
-
-                    // Free _MemoryArena_ memory from computing image sample
-                    // value
-                    arena.Reset();
-                } while (tileSampler->StartNextSample());
-
+                    do {
+    
+                        // Initialize _CameraSample_ for current sample
+                        CameraSample cameraSample =
+                            tileSampler->GetCameraSample(pixel);
+    
+                        // Generate camera ray for current sample
+                        RayDifferential ray;
+                        Float rayWeight =
+                            camera->GenerateRayDifferential(cameraSample, &ray);
+                        ray.ScaleDifferentials(
+                            1 / std::sqrt((Float)tileSampler->samplesPerPixel));
+                        ++nCameraRays;
+    
+                        // begin sample
+                        extractorTile->BeginSample(cameraSample.pFilm);
+    
+                        // Evaluate radiance along camera ray
+                        Spectrum L(0.f);
+    
+                        extractorTile->BeginPath(cameraSample.pFilm);
+                        if (rayWeight > 0) L = Li(ray, scene, *tileSampler, arena, *extractorTile);
+    
+                        // Issue warning if unexpected radiance value returned
+                        if (L.HasNaNs()) {
+                            LOG(ERROR) << StringPrintf(
+                                "Not-a-number radiance value returned "
+                                "for pixel (%d, %d), sample %d. Setting to black.",
+                                pixel.x, pixel.y,
+                                (int)tileSampler->CurrentSampleNumber());
+                            L = Spectrum(0.f);
+                        } else if (L.y() < -1e-5) {
+                            LOG(ERROR) << StringPrintf(
+                                "Negative luminance value, %f, returned "
+                                "for pixel (%d, %d), sample %d. Setting to black.",
+                                L.y(), pixel.x, pixel.y,
+                                (int)tileSampler->CurrentSampleNumber());
+                            L = Spectrum(0.f);
+                        } else if (std::isinf(L.y())) {
+                              LOG(ERROR) << StringPrintf(
+                                "Infinite luminance value returned "
+                                "for pixel (%d, %d), sample %d. Setting to black.",
+                                pixel.x, pixel.y,
+                                (int)tileSampler->CurrentSampleNumber());
+                            L = Spectrum(0.f);
+                        }
+                        VLOG(1) << "Camera sample: " << cameraSample << " -> ray: " <<
+                            ray << " -> L = " << L;
+                        extractorTile->EndPath(L, rayWeight);
+                        extractorTile->EndSample(L, rayWeight);
+                        // Add camera ray's contribution to image
+                        filmTile->AddSample(cameraSample.pFilm, L, rayWeight);
+                        
+                        current_mean += L.y();
+                        current_variance += L.y()*L.y();
+                        
+                    } while (tileSampler->StartNextSample());
+                    
+                    temp = std::sqrt(std::abs(current_variance / ( (Float)tileSampler->samplesPerPixel * iterations ) - current_mean * current_mean));
+                    
+                    //std::cout << "Temp : " <<  temp  << std::endl;
+                    //std::cout << "Target : " <<  current_mean * (1 - luminance_interval_error_percentage * 0.05) << " and " <<   current_mean * (1 + luminance_interval_error_percentage * 0.05)  << std::endl ;
+                    
+                    //std::cout << "Temp : " <<  temp  << std::endl;
+                    //std::cout << "Target : " <<  current_mean * luminance_interval_error_percentage * 0.95 << std::endl ;
+                    
+                } while(iterations < 16 && current_mean * luminance_interval_error_percentage < temp);
+                
+                arena.Reset();
+                
+                if(iterations > 1){
+                    std::cout << "Calculated : " <<  (Float)tileSampler->samplesPerPixel * iterations  << std::endl;
+                    std::cout << "Temp : " <<  temp  << std::endl;
+                    std::cout << "Target : " <<  current_mean * (1 - luminance_interval_error_percentage * 0.05) << " and " <<   current_mean * (1 + luminance_interval_error_percentage * 0.05)  << std::endl ;
+                }
+                
                 extractorTile->EndPixel();
             }
             extractor->EndTile(std::move(extractorTile));
