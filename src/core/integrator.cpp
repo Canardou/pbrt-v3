@@ -236,6 +236,47 @@ void SamplerIntegrator::Render(const Scene &scene) {
     // Compute number of tiles, _nTiles_, to use for parallel rendering
     Bounds2i sampleBounds = camera->film->GetSampleBounds();
     Vector2i sampleExtent = sampleBounds.Diagonal();
+    
+    //TODO: Generate 10 000 samples to estimate average lumniance
+    std::unique_ptr<Extractor> extractorTile = extractor->BeginTile(sampleBounds);
+    float mean(0.0f);
+    float variance(0.0f);
+    
+    int estimate_samples = 10000;
+    for(int i = 0; i < estimate_samples; i++){
+        MemoryArena arena;
+        
+        int x = std::rand() % sampleExtent.x;
+        int y = std::rand() % sampleExtent.y;
+        Point2i pixel(x, y);
+        
+        std::unique_ptr<Sampler> tileSampler = sampler->Clone(i);
+        tileSampler->StartPixel(pixel);
+        
+        CameraSample cameraSample = tileSampler->GetCameraSample(pixel);
+        
+        RayDifferential ray;
+        Float rayWeight =
+            camera->GenerateRayDifferential(cameraSample, &ray);
+        ray.ScaleDifferentials(1.0f);
+            
+        Spectrum L(0.f);
+
+        extractorTile->BeginPath(cameraSample.pFilm);
+        if (rayWeight > 0) L = Li(ray, scene, *tileSampler, arena, *extractorTile);
+        
+        mean += L.y();
+        variance += L.y()*L.y();
+    }
+    
+    mean /= estimate_samples;
+    variance = std::sqrt(variance / estimate_samples - mean * mean);
+    
+    std::cout << "Luminance mean : " << mean << std::endl;
+    std::cout << "Luminance variance : " << variance << std::endl;
+    std::cout << "Interval : [" << mean - 2 * variance / std::sqrt(estimate_samples) << "," <<  mean + 2 * variance / std::sqrt(estimate_samples)<< "]" << std::endl;
+    //END TODO
+    
     const int tileSize = 16;
     Point2i nTiles((sampleExtent.x + tileSize - 1) / tileSize,
                    (sampleExtent.y + tileSize - 1) / tileSize);

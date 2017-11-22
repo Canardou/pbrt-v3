@@ -70,9 +70,8 @@ Spectrum VolPathIntegrator::Li(const RayDifferential &r, const Scene &scene,
     Float etaScale = 1;
 
     extractor.AddCameraVertex(r.o);
-
+    
     for (bounces = 0;; ++bounces) {
-
 
         // Intersect _ray_ with scene and store intersection in _isect_
         SurfaceInteraction isect;
@@ -208,6 +207,7 @@ VolPathIntegrator *CreateVolPathIntegrator(
     std::shared_ptr<Extractor> extractor) {
     int maxDepth = params.FindOneInt("maxdepth", 5);
     int np;
+    int index = 0;
     const int *pb = params.FindInt("pixelbounds", &np);
     Bounds2i pixelBounds = camera->film->GetSampleBounds();
     if (pb) {

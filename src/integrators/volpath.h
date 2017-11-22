@@ -64,6 +64,7 @@ class VolPathIntegrator : public SamplerIntegrator {
 
   private:
     // VolPathIntegrator Private Data
+    int index;
     const int maxDepth;
     const Float rrThreshold;
     const std::string lightSampleStrategy;
