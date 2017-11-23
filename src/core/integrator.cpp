@@ -239,7 +239,7 @@ void SamplerIntegrator::Render(const Scene &scene) {
     
     //TODO: Generate 10 000 samples to estimate average lumniance
     std::unique_ptr<Extractor> extractorTile = extractor->BeginTile(sampleBounds);
-    float mean(0.0f);
+    float image_luminance_mean(0.0f);
     float variance(0.0f);
     
     int estimate_samples = 10000;
@@ -265,14 +265,23 @@ void SamplerIntegrator::Render(const Scene &scene) {
         extractorTile->BeginPath(cameraSample.pFilm);
         if (rayWeight > 0) L = Li(ray, scene, *tileSampler, arena, *extractorTile);
         
-        mean += L.y();
-        variance += L.y()*L.y();
+        float delta;
+        if(i>0)
+            delta = L.y() - image_luminance_mean / i;
+        else
+            delta = L.y();
+        image_luminance_mean += L.y();
+        variance += delta*delta;
     }
     
-    mean /= estimate_samples;
-    variance = std::sqrt(variance / estimate_samples - mean * mean);
+    image_luminance_mean /= estimate_samples;
+    variance = std::sqrt(variance / estimate_samples);
     
-    float luminance_interval_error_percentage = 2 * variance / std::sqrt(estimate_samples) / mean;
+    float image_quantile = 1.96 * variance / std::sqrt(2048);
+    
+    std::cout << "Mean : " << image_luminance_mean << std::endl;
+    std::cout << "var : " << variance << std::endl;
+    std::cout << "Quantile : " << image_quantile << std::endl;
     //END TODO
     
     const int tileSize = 16;
@@ -304,12 +313,12 @@ void SamplerIntegrator::Render(const Scene &scene) {
 
             // Get tiles for extractors
             std::unique_ptr<Extractor> extractorTile = extractor->BeginTile(tileBounds);
+            
 
             // Loop over pixels in tile to render them
             for (Point2i pixel : tileBounds) {
                 {
                     ProfilePhase pp(Prof::StartPixel);
-                    tileSampler->StartPixel(pixel);
                 }
 
                 // Do this check after the BeginPixel() call; this keeps
@@ -325,16 +334,19 @@ void SamplerIntegrator::Render(const Scene &scene) {
                 
                 float current_mean = 0.0f;
                 float current_variance = 0.0f;
-                float iterations = 0.0f;
-                float temp = 0.0f;
-                    
+                float current_samples = 0.0f;
+                float std_error = 0.0f;
+                
+                tileSampler->StartPixel(pixel);
+                
                 do {
                     
                 //END TODO
-                    iterations += 1.0f;
+                    int iterations = 0;
 
                     do {
-    
+                        iterations ++;
+                        
                         // Initialize _CameraSample_ for current sample
                         CameraSample cameraSample =
                             tileSampler->GetCameraSample(pixel);
@@ -344,7 +356,7 @@ void SamplerIntegrator::Render(const Scene &scene) {
                         Float rayWeight =
                             camera->GenerateRayDifferential(cameraSample, &ray);
                         ray.ScaleDifferentials(
-                            1 / std::sqrt((Float)tileSampler->samplesPerPixel));
+                            1 / std::sqrt((Float)tileSampler->samplesPerPixel) );
                         ++nCameraRays;
     
                         // begin sample
@@ -386,31 +398,30 @@ void SamplerIntegrator::Render(const Scene &scene) {
                         // Add camera ray's contribution to image
                         filmTile->AddSample(cameraSample.pFilm, L, rayWeight);
                         
-                        current_mean += L.y();
-                        current_variance += L.y()*L.y();
+                        float delta;
+                        if(current_samples>0)
+                            delta = L.y() - current_mean / current_samples;
+                        else
+                            delta = L.y();
                         
-                    } while (tileSampler->StartNextSample());
+                        current_mean += L.y();
+                        current_variance += delta*delta;
+                        current_samples ++;
+                        
+                    } while (iterations < 64 && tileSampler->StartNextSample());
                     
-                    temp = std::sqrt(std::abs(current_variance / ( (Float)tileSampler->samplesPerPixel * iterations ) - current_mean * current_mean));
+                    std_error = std::sqrt(current_variance / current_samples);
                     
-                    //std::cout << "Temp : " <<  temp  << std::endl;
-                    //std::cout << "Target : " <<  current_mean * (1 - luminance_interval_error_percentage * 0.05) << " and " <<   current_mean * (1 + luminance_interval_error_percentage * 0.05)  << std::endl ;
+                    std_error = 1.96 * std_error / std::sqrt(current_samples);
                     
-                    //std::cout << "Temp : " <<  temp  << std::endl;
-                    //std::cout << "Target : " <<  current_mean * luminance_interval_error_percentage * 0.95 << std::endl ;
-                    
-                } while(iterations < 16 && current_mean * luminance_interval_error_percentage < temp);
+                } while(tileSampler->StartNextSample() && std_error > image_quantile * 0.10);
                 
                 arena.Reset();
                 
-                if(iterations > 1){
-                    std::cout << "Calculated : " <<  (Float)tileSampler->samplesPerPixel * iterations  << std::endl;
-                    std::cout << "Temp : " <<  temp  << std::endl;
-                    std::cout << "Target : " <<  current_mean * (1 - luminance_interval_error_percentage * 0.05) << " and " <<   current_mean * (1 + luminance_interval_error_percentage * 0.05)  << std::endl ;
-                }
-                
                 extractorTile->EndPixel();
+                
             }
+
             extractor->EndTile(std::move(extractorTile));
 
             LOG(INFO) << "Finished image tile " << tileBounds;
@@ -422,6 +433,7 @@ void SamplerIntegrator::Render(const Scene &scene) {
         }, nTiles);
         reporter.Done();
     }
+    
     LOG(INFO) << "Rendering finished";
 
     // Save final image after rendering

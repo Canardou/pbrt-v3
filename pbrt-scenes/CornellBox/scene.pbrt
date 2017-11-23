@@ -2,7 +2,7 @@ Integrator "volpath" "integer maxdepth" [ 5 ]
 
 Transform [ 1 -0 -0 -0 -0 1 -0 -0 -0 -0 -1 -0 -0 -1 6.8 1]
 
-Sampler "sobol" "integer pixelsamples" [ 64 ]
+Sampler "sobol" "integer pixelsamples" [ 2048 ]
 
 PixelFilter "triangle" "float xwidth" [ 1.000000 ] "float ywidth" [ 1.000000 ]
 
@@ -10,9 +10,6 @@ Film "image" "integer xresolution" [ 64 ] "integer yresolution" [ 64 ] "string f
 
 Camera "perspective" "float fov" [ 19.500000 ]
 
-Extractor "albedo" "bool closedformonly" [ "false" ]
-Extractor "normal"
-Extractor "depth" "float znear" [ 5.0 ] "float zfar" [ 10. ]
 Extractor "statistics"
 
 WorldBegin

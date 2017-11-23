@@ -160,7 +160,7 @@ void ExtractorStatistics::Flush(float splatScale) {
         PixelStatistics & stat = pixel_statistics.GetPixel(p);
         luminance_error_film->AddSplat(pf, Spectrum(stat.luminance_error));
         luminance_mean_film->AddSplat(pf, Spectrum(stat.luminance_mean));
-        nbsamples_film->AddSplat(pf, Spectrum(stat.nbsamples));
+        nbsamples_film->AddSplat(pf, Spectrum(stat.nbsamples/2048.0f));
     }
 
     luminance_error_film->WriteImage(1.0f);
