@@ -154,6 +154,10 @@ void ExtractorStatistics::Initialize(const Bounds3f &worldBound) {
 }
 
 void ExtractorStatistics::Flush(float splatScale) {
+    
+    float nb = 0.0f;
+    float nombre_rayons_moyen = 0.0f;
+    float erreurs_moyen = 0.0f;
 
     for (const auto &p : pixel_statistics.GetBounds()) {
         Point2f pf(p.x, p.y);
@@ -161,7 +165,13 @@ void ExtractorStatistics::Flush(float splatScale) {
         luminance_error_film->AddSplat(pf, Spectrum(stat.luminance_error));
         luminance_mean_film->AddSplat(pf, Spectrum(stat.luminance_mean));
         nbsamples_film->AddSplat(pf, Spectrum(stat.nbsamples/4096.0f));
+        nombre_rayons_moyen+=stat.nbsamples;
+        erreurs_moyen+=stat.luminance_error;
+        nb++;
     }
+
+    std::cout << "Nombre moyen : " << nombre_rayons_moyen/nb << std::endl;
+    std::cout << "Erreur moyen : " << erreurs_moyen/nb << std::endl;
 
     luminance_error_film->WriteImage(1.0f);
     luminance_mean_film->WriteImage(1.0f);

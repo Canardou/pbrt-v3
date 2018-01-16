@@ -411,11 +411,11 @@ void SamplerIntegrator::Render(const Scene &scene) {
                         
                     } while (iterations < 64 && tileSampler->StartNextSample());
                     
-                    std_error = current_variance / std::sqrt(current_samples);
+                    std_error = std::sqrt(current_variance) / current_samples;
                     
                     tc = 1.96 * std_error;
                     
-                } while(tileSampler->StartNextSample() && tc < image_luminance_mean * 0.90);
+                } while(tileSampler->StartNextSample() && tc > image_luminance_mean * 0.01);
                 
                 //std::cout << tc << std::endl;
                 
