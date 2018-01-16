@@ -1,4 +1,4 @@
-Integrator "volpath" "integer maxdepth" [ 5 ]
+Integrator "bdpt" "integer maxdepth" [ 5 ]
 
 Transform [ 1 -0 -0 -0 -0 1 -0 -0 -0 -0 -1 -0 -0 -1 6.8 1]
 
@@ -6,7 +6,7 @@ Sampler "sobol" "integer pixelsamples" [ 4096 ]
 
 PixelFilter "triangle" "float xwidth" [ 1.000000 ] "float ywidth" [ 1.000000 ]
 
-Film "image" "integer xresolution" [ 64 ] "integer yresolution" [ 64 ] "string filename" [ "volpathtcornell-box-8spp.png" ] 
+Film "image" "integer xresolution" [ 64 ] "integer yresolution" [ 64 ] "string filename" [ "bdptcornell-box-8spp.png" ] 
 
 Camera "perspective" "float fov" [ 19.500000 ]
 

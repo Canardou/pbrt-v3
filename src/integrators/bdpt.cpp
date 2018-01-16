@@ -303,7 +303,7 @@ inline int BufferIndex(int s, int t) {
     return s + above * (5 + above) / 2;
 }
 
-void BDPTIntegrator::Render(const Scene &scene) {
+void BDPTIntegrator::Preprocess(const Scene &scene, Sampler &sampler) {
     std::unique_ptr<LightDistribution> lightDistribution =
         CreateLightSampleDistribution(lightSampleStrategy, scene);
 
@@ -318,14 +318,147 @@ void BDPTIntegrator::Render(const Scene &scene) {
     Film *film = camera->film;
     const Bounds2i sampleBounds = film->GetSampleBounds();
     const Vector2i sampleExtent = sampleBounds.Diagonal();
+    
+    
+    //TODO: Generate 10 000 samples to estimate average lumniance
+    std::unique_ptr<Extractor> extractorTile = extractor->BeginTile(sampleBounds);
+    image_luminance_mean = 0.0f;
+    float variance(0.0f);
+    
+    std::unique_ptr<Extractor> extractorTiles =
+                    extractor->BeginTile(sampleBounds);
+    
+    const int bufferCount = (1 + maxDepth) * (6 + maxDepth) / 2;
+    std::vector<std::unique_ptr<Film>> weightFilms(bufferCount);
+    
+    int estimate_samples = 10000;
+    for(int i = 0; i < estimate_samples; i++){
+        MemoryArena arena;
+        
+        std::unique_ptr<Sampler> tileSampler = sampler.Clone(i);
+         // Generate a single sample using BDPT
+         
+        int x = std::rand() % sampleExtent.x;
+        int y = std::rand() % sampleExtent.y;
+        Point2i pPixel(x, y);
+        
+        tileSampler->StartPixel(pPixel);
+         
+        Point2f pFilm = (Point2f)pPixel + tileSampler->Get2D();
+
+        // Trace the camera subpath
+        Vertex *cameraVertices = arena.Alloc<Vertex>(maxDepth + 2);
+        Vertex *lightVertices = arena.Alloc<Vertex>(maxDepth + 1);
+        int nCamera = GenerateCameraSubpath(
+            scene, *tileSampler, arena, maxDepth + 2, *camera,
+            pFilm, cameraVertices);
+        // Get a distribution for sampling the light at the
+        // start of the light subpath. Because the light path
+        // follows multiple bounces, basing the sampling
+        // distribution on any of the vertices of the camera
+        // path is unlikely to be a good strategy. We use the
+        // PowerLightDistribution by default here, which
+        // doesn't use the point passed to it.
+        const Distribution1D *lightDistr =
+            lightDistribution->Lookup(cameraVertices[0].p());
+        // Now trace the light subpath
+        int nLight = GenerateLightSubpath(
+            scene, *tileSampler, arena, maxDepth + 1,
+            cameraVertices[0].time(), *lightDistr, lightToIndex,
+            lightVertices);
+
+        // Execute all BDPT connection strategies
+        Spectrum L(0.f);
+
+        for (int t = 1; t <= nCamera; ++t) {
+            for (int s = 0; s <= nLight; ++s) {
+
+                int depth = t + s - 2;
+
+                if ((s == 1 && t == 1) || depth < 0 ||
+                    depth > maxDepth)
+                    continue;
+
+                // extractorTiles->BeginPath(sample_pos);
+                // Execute the $(s, t)$ connection strategy and
+                // update _L_
+                Point2f pFilmNew = pFilm;
+                Float misWeight = 0.f;
+
+                Spectrum Lpath = ConnectBDPT(
+                    scene, lightVertices, cameraVertices, s, t,
+                    *lightDistr, lightToIndex, *camera, *tileSampler,
+                    &pFilmNew, *extractorTiles, &misWeight);
+                VLOG(2) << "Connect bdpt s: " << s <<", t: " << t <<
+                    ", Lpath: " << Lpath << ", misWeight: " << misWeight;
+
+                if (visualizeStrategies || visualizeWeights) {
+                    Spectrum value;
+                    if (visualizeStrategies)
+                        value =
+                            misWeight == 0 ? 0 : Lpath / misWeight;
+                    if (visualizeWeights) value = Lpath;
+                    weightFilms[BufferIndex(s, t)]->AddSplat(
+                        pFilmNew, value);
+                }
+
+                if (t != 1) {
+                  L += Lpath;
+                }
+                else {
+                  film->AddSplat(pFilmNew, Lpath);
+                }
+            }
+        }
+        VLOG(2) << "Add film sample sample_pos: " << pFilm << ", L: " << L <<
+            ", (y: " << L.y() << ")";
+
+        arena.Reset();
+        
+        float delta;
+        if(i>0)
+            delta = L.y() - image_luminance_mean / i;
+        else
+            delta = L.y();
+        image_luminance_mean += L.y();
+        variance += delta*delta;
+    }
+    
+    image_luminance_mean /= estimate_samples;
+    variance = std::sqrt(variance / estimate_samples);
+    
+    float image_quantile = 1.96 * variance / std::sqrt(4096);
+    
+    std::cout << "Mean : " << image_luminance_mean << std::endl;
+    //END TODO
+}
+
+void BDPTIntegrator::Render(const Scene &scene) {
+    std::unique_ptr<LightDistribution> lightDistribution =
+        CreateLightSampleDistribution(lightSampleStrategy, scene);
+    BDPTIntegrator::Preprocess(scene, *sampler);
+
+
+    const int bufferCount = (1 + maxDepth) * (6 + maxDepth) / 2;
+    std::vector<std::unique_ptr<Film>> weightFilms(bufferCount);
+    // Compute a reverse mapping from light pointers to offsets into the
+    // scene lights vector (and, equivalently, offsets into
+    // lightDistr). Added after book text was finalized; this is critical
+    // to reasonable performance with 100s+ of light sources.
+    std::unordered_map<const Light *, size_t> lightToIndex;
+    for (size_t i = 0; i < scene.lights.size(); ++i)
+        lightToIndex[scene.lights[i].get()] = i;
+
+    Film *film = camera->film;
+    const Bounds2i sampleBounds = film->GetSampleBounds();
+    const Vector2i sampleExtent = sampleBounds.Diagonal();
+    
     const int tileSize = 16;
     const int nXTiles = (sampleExtent.x + tileSize - 1) / tileSize;
     const int nYTiles = (sampleExtent.y + tileSize - 1) / tileSize;
     ProgressReporter reporter(nXTiles * nYTiles, "Rendering");
 
     // Allocate buffers for debug visualization
-    const int bufferCount = (1 + maxDepth) * (6 + maxDepth) / 2;
-    std::vector<std::unique_ptr<Film>> weightFilms(bufferCount);
     if (visualizeStrategies || visualizeWeights) {
         for (int depth = 0; depth <= maxDepth; ++depth) {
             for (int s = 0; s <= depth + 2; ++s) {
@@ -364,91 +497,124 @@ void BDPTIntegrator::Render(const Scene &scene) {
                     extractor->BeginTile(tileBounds);
 
             for (Point2i pPixel : tileBounds) {
-
+                
                 tileSampler->StartPixel(pPixel);
 
                 extractorTiles->BeginPixel(pPixel);
 
                 if (!InsideExclusive(pPixel, pixelBounds))
                     continue;
+                    
+                float current_mean = 0.0f;
+                float current_variance = 0.0f;
+                float current_samples = 0.0f;
+                float std_error = 0.0f;
+                float tc = 0.0f;
+                
+                int iterations;
+                
                 do {
-                    // Generate a single sample using BDPT
-                    Point2f pFilm = (Point2f)pPixel + tileSampler->Get2D();
-
-
-                    // Trace the camera subpath
-                    Vertex *cameraVertices = arena.Alloc<Vertex>(maxDepth + 2);
-                    Vertex *lightVertices = arena.Alloc<Vertex>(maxDepth + 1);
-                    int nCamera = GenerateCameraSubpath(
-                        scene, *tileSampler, arena, maxDepth + 2, *camera,
-                        pFilm, cameraVertices);
-                    // Get a distribution for sampling the light at the
-                    // start of the light subpath. Because the light path
-                    // follows multiple bounces, basing the sampling
-                    // distribution on any of the vertices of the camera
-                    // path is unlikely to be a good strategy. We use the
-                    // PowerLightDistribution by default here, which
-                    // doesn't use the point passed to it.
-                    const Distribution1D *lightDistr =
-                        lightDistribution->Lookup(cameraVertices[0].p());
-                    // Now trace the light subpath
-                    int nLight = GenerateLightSubpath(
-                        scene, *tileSampler, arena, maxDepth + 1,
-                        cameraVertices[0].time(), *lightDistr, lightToIndex,
-                        lightVertices);
-
-                    extractorTiles->BeginSample(pFilm);
-                    // Execute all BDPT connection strategies
-                    Spectrum L(0.f);
-
-                    for (int t = 1; t <= nCamera; ++t) {
-                        for (int s = 0; s <= nLight; ++s) {
-
-                            int depth = t + s - 2;
-
-                            if ((s == 1 && t == 1) || depth < 0 ||
-                                depth > maxDepth)
-                                continue;
-
-                            // extractorTiles->BeginPath(sample_pos);
-                            // Execute the $(s, t)$ connection strategy and
-                            // update _L_
-                            Point2f pFilmNew = pFilm;
-                            Float misWeight = 0.f;
-
-                            Spectrum Lpath = ConnectBDPT(
-                                scene, lightVertices, cameraVertices, s, t,
-                                *lightDistr, lightToIndex, *camera, *tileSampler,
-                                &pFilmNew, *extractorTiles, &misWeight);
-                            VLOG(2) << "Connect bdpt s: " << s <<", t: " << t <<
-                                ", Lpath: " << Lpath << ", misWeight: " << misWeight;
-
-                            if (visualizeStrategies || visualizeWeights) {
-                                Spectrum value;
-                                if (visualizeStrategies)
-                                    value =
-                                        misWeight == 0 ? 0 : Lpath / misWeight;
-                                if (visualizeWeights) value = Lpath;
-                                weightFilms[BufferIndex(s, t)]->AddSplat(
-                                    pFilmNew, value);
-                            }
-
-                            if (t != 1) {
-                              L += Lpath;
-                            }
-                            else {
-                              film->AddSplat(pFilmNew, Lpath);
+                    
+                    iterations = 0;
+                    
+                    do {
+                        iterations ++;
+                        // Generate a single sample using BDPT
+                        Point2f pFilm = (Point2f)pPixel + tileSampler->Get2D();
+    
+    
+                        // Trace the camera subpath
+                        Vertex *cameraVertices = arena.Alloc<Vertex>(maxDepth + 2);
+                        Vertex *lightVertices = arena.Alloc<Vertex>(maxDepth + 1);
+                        int nCamera = GenerateCameraSubpath(
+                            scene, *tileSampler, arena, maxDepth + 2, *camera,
+                            pFilm, cameraVertices);
+                        // Get a distribution for sampling the light at the
+                        // start of the light subpath. Because the light path
+                        // follows multiple bounces, basing the sampling
+                        // distribution on any of the vertices of the camera
+                        // path is unlikely to be a good strategy. We use the
+                        // PowerLightDistribution by default here, which
+                        // doesn't use the point passed to it.
+                        const Distribution1D *lightDistr =
+                            lightDistribution->Lookup(cameraVertices[0].p());
+                        // Now trace the light subpath
+                        int nLight = GenerateLightSubpath(
+                            scene, *tileSampler, arena, maxDepth + 1,
+                            cameraVertices[0].time(), *lightDistr, lightToIndex,
+                            lightVertices);
+    
+                        extractorTiles->BeginSample(pFilm);
+                        // Execute all BDPT connection strategies
+                        Spectrum L(0.f);
+    
+                        for (int t = 1; t <= nCamera; ++t) {
+                            for (int s = 0; s <= nLight; ++s) {
+    
+                                int depth = t + s - 2;
+    
+                                if ((s == 1 && t == 1) || depth < 0 ||
+                                    depth > maxDepth)
+                                    continue;
+    
+                                // extractorTiles->BeginPath(sample_pos);
+                                // Execute the $(s, t)$ connection strategy and
+                                // update _L_
+                                Point2f pFilmNew = pFilm;
+                                Float misWeight = 0.f;
+    
+                                Spectrum Lpath = ConnectBDPT(
+                                    scene, lightVertices, cameraVertices, s, t,
+                                    *lightDistr, lightToIndex, *camera, *tileSampler,
+                                    &pFilmNew, *extractorTiles, &misWeight);
+                                VLOG(2) << "Connect bdpt s: " << s <<", t: " << t <<
+                                    ", Lpath: " << Lpath << ", misWeight: " << misWeight;
+    
+                                if (visualizeStrategies || visualizeWeights) {
+                                    Spectrum value;
+                                    if (visualizeStrategies)
+                                        value =
+                                            misWeight == 0 ? 0 : Lpath / misWeight;
+                                    if (visualizeWeights) value = Lpath;
+                                    weightFilms[BufferIndex(s, t)]->AddSplat(
+                                        pFilmNew, value);
+                                }
+    
+                                if (t != 1) {
+                                  L += Lpath;
+                                }
+                                else {
+                                  film->AddSplat(pFilmNew, Lpath);
+                                }
                             }
                         }
-                    }
-                    VLOG(2) << "Add film sample sample_pos: " << pFilm << ", L: " << L <<
-                        ", (y: " << L.y() << ")";
-
-                    extractorTiles->EndSample(L);
-                    filmTile->AddSample(pFilm, L);
-
-                    arena.Reset();
-                } while (tileSampler->StartNextSample());
+                        VLOG(2) << "Add film sample sample_pos: " << pFilm << ", L: " << L <<
+                            ", (y: " << L.y() << ")";
+    
+                        extractorTiles->EndSample(L);
+                        filmTile->AddSample(pFilm, L);
+                        
+                        float delta;
+                        if(current_samples>0)
+                            delta = L.y() - current_mean / current_samples;
+                        else
+                            delta = L.y();
+                        
+                        current_mean += L.y();
+                        current_variance += delta*delta;
+                        current_samples ++;
+    
+                        arena.Reset();
+                    } while (iterations < 64 && tileSampler->StartNextSample());
+                    
+                    std_error = current_variance / std::sqrt(current_samples);
+                    
+                    tc = 1.96 * std_error;
+                    
+                } while(tileSampler->StartNextSample() && tc < image_luminance_mean * 0.90);
+                
+                arena.Reset();
+                
                 extractorTiles->EndPixel();
             }
 

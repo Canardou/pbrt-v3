@@ -50,6 +50,7 @@ STAT_COUNTER("Integrator/Surface interactions", surfaceInteractions);
 void VolPathIntegrator::Preprocess(const Scene &scene, Sampler &sampler) {
     lightDistribution =
         CreateLightSampleDistribution(lightSampleStrategy, scene);
+    SamplerIntegrator::Preprocess(scene, sampler);
 }
 
 Spectrum VolPathIntegrator::Li(const RayDifferential &r, const Scene &scene,

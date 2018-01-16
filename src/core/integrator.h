@@ -83,7 +83,7 @@ class SamplerIntegrator : public Integrator {
                       std::shared_ptr<Extractor> extractor,
                       const Bounds2i &pixelBounds)
         : camera(camera), sampler(sampler), extractor(extractor), pixelBounds(pixelBounds) {}
-    virtual void Preprocess(const Scene &scene, Sampler &sampler) {}
+    virtual void Preprocess(const Scene &scene, Sampler &sampler);
     void Render(const Scene &scene);
 
     virtual Spectrum Li(const RayDifferential &ray, const Scene &scene,
@@ -111,6 +111,7 @@ class SamplerIntegrator : public Integrator {
     std::shared_ptr<const Camera> camera;
 
   private:
+    float image_luminance_mean;
     // SamplerIntegrator Private Data
     std::shared_ptr<Sampler> sampler;
     std::shared_ptr<Extractor> extractor;

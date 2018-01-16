@@ -142,8 +142,10 @@ class BDPTIntegrator : public Integrator {
           pixelBounds(pixelBounds),
           lightSampleStrategy(lightSampleStrategy) {}
     void Render(const Scene &scene);
+    virtual void Preprocess(const Scene &scene, Sampler &sampler);
 
   private:
+    float image_luminance_mean;
     // BDPTIntegrator Private Data
     std::shared_ptr<Sampler> sampler;
     std::shared_ptr<const Camera> camera;

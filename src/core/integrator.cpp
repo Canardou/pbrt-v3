@@ -228,18 +228,13 @@ std::unique_ptr<Distribution1D> ComputeLightPowerDistribution(
         new Distribution1D(&lightPower[0], lightPower.size()));
 }
 
-// SamplerIntegrator Method Definitions
-void SamplerIntegrator::Render(const Scene &scene) {
-    Preprocess(scene, *sampler);
-    // Render image tiles in parallel
-
-    // Compute number of tiles, _nTiles_, to use for parallel rendering
+void SamplerIntegrator::Preprocess(const Scene &scene, Sampler &sampler) {
     Bounds2i sampleBounds = camera->film->GetSampleBounds();
     Vector2i sampleExtent = sampleBounds.Diagonal();
     
     //TODO: Generate 10 000 samples to estimate average lumniance
     std::unique_ptr<Extractor> extractorTile = extractor->BeginTile(sampleBounds);
-    float image_luminance_mean(0.0f);
+    image_luminance_mean = 0.0f;
     float variance(0.0f);
     
     int estimate_samples = 10000;
@@ -250,7 +245,7 @@ void SamplerIntegrator::Render(const Scene &scene) {
         int y = std::rand() % sampleExtent.y;
         Point2i pixel(x, y);
         
-        std::unique_ptr<Sampler> tileSampler = sampler->Clone(i);
+        std::unique_ptr<Sampler> tileSampler = sampler.Clone(i);
         tileSampler->StartPixel(pixel);
         
         CameraSample cameraSample = tileSampler->GetCameraSample(pixel);
@@ -277,12 +272,17 @@ void SamplerIntegrator::Render(const Scene &scene) {
     image_luminance_mean /= estimate_samples;
     variance = std::sqrt(variance / estimate_samples);
     
-    float image_quantile = 1.96 * variance / std::sqrt(2048);
+    std::cout << "Luminance" << image_luminance_mean << std::endl;
+}
+
+// SamplerIntegrator Method Definitions
+void SamplerIntegrator::Render(const Scene &scene) {
+    Preprocess(scene, *sampler);
+    // Render image tiles in parallel
     
-    std::cout << "Mean : " << image_luminance_mean << std::endl;
-    std::cout << "var : " << variance << std::endl;
-    std::cout << "Quantile : " << image_quantile << std::endl;
-    //END TODO
+    // Compute number of tiles, _nTiles_, to use for parallel rendering
+    Bounds2i sampleBounds = camera->film->GetSampleBounds();
+    Vector2i sampleExtent = sampleBounds.Diagonal();
     
     const int tileSize = 16;
     Point2i nTiles((sampleExtent.x + tileSize - 1) / tileSize,
@@ -336,6 +336,7 @@ void SamplerIntegrator::Render(const Scene &scene) {
                 float current_variance = 0.0f;
                 float current_samples = 0.0f;
                 float std_error = 0.0f;
+                float tc = 0.0f;
                 
                 tileSampler->StartPixel(pixel);
                 
@@ -410,16 +411,17 @@ void SamplerIntegrator::Render(const Scene &scene) {
                         
                     } while (iterations < 64 && tileSampler->StartNextSample());
                     
-                    std_error = std::sqrt(current_variance / current_samples);
+                    std_error = current_variance / std::sqrt(current_samples);
                     
-                    std_error = 1.96 * std_error / std::sqrt(current_samples);
+                    tc = 1.96 * std_error;
                     
-                } while(tileSampler->StartNextSample() && std_error > image_quantile * 0.10);
+                } while(tileSampler->StartNextSample() && tc < image_luminance_mean * 0.90);
+                
+                //std::cout << tc << std::endl;
                 
                 arena.Reset();
                 
                 extractorTile->EndPixel();
-                
             }
 
             extractor->EndTile(std::move(extractorTile));
